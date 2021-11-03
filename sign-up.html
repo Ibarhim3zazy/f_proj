@@ -1,0 +1,174 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sign_in</title>
+	<style>
+		body
+		{
+			margin: 0px;
+			background-color: #e4e2e3;
+			font-family: poppins , avenir;
+			font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif" ,Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		}
+		#container
+		{
+			width: 70%;
+			height: auto;
+			padding: 50px;
+			margin: auto;
+		}
+		#signin
+		{
+			width: 40%;
+			height: auto;
+			padding-bottom: 20px;
+			border-style: outset;
+			border-width: thin;
+			border-radius: 25px;
+			margin: auto;
+			text-align: center;
+			background-color: #fff;
+		}
+		#p
+		{
+			width:70%;
+			height: auto;
+			margin: auto;
+			margin-bottom: 20px;
+		}
+		.signin-logo
+		{
+			width: 10px;
+			height: 20px;
+			margin: -10px 20px 5px 0px;
+			padding: 5px 30px 5px 0px;
+			color: #fff;
+			border-right: solid 1px;
+			font-size: 25px;
+			text-indent: 5px;
+			float: left;
+		}
+		.sign
+		{
+			width: 70%;
+			height: 30px;
+			margin: auto;
+			margin-top: 10px;
+			border-radius: 5px;
+			padding: 10px;
+			background: linear-gradient(to left, #f66432, #ea1c60);
+			color: #fff;
+		}
+		.sign:hover
+		{
+			transition: 1s;
+			background: #272828;
+		}
+		#signup
+		{
+			width: 300px;
+			height: auto;
+			margin: auto;
+			margin-top: 40px;
+			color: #000a;
+			text-align: center;
+		}
+		#signupgo
+		{
+			color: #0007;
+			transition: .5s;
+		}
+		#signupgo:hover
+		{
+			transition: .5s;
+			
+			color: #000;
+		}
+		.footer
+		{
+			width: 100%;
+			height: auto;
+			display: block;
+			padding-top: 50px;
+			text-align: center;
+			background: #e4e2e3;
+		}
+		.img-footer
+		{
+			width: 40px;
+			height: 40px;
+			padding: 5px;
+			margin-right: 25px;
+			cursor: pointer;
+			border-radius: 10px;
+			
+		}
+		.img-footer:hover
+		{
+			background-color:  #B0D9E4;
+		}
+		#copyright
+		{
+			width: 500px;
+			height: auto;
+			display: block;
+			padding-top: 20px;
+			margin: auto;
+			color: #677FD5;
+		}
+		#final
+		{
+			padding-top: 20px;
+			padding-bottom: 40px;
+			margin: auto;
+			color: #677FD5;
+		}
+		#final a
+		{
+			text-decoration: none;
+			color: #677FD5;
+			font-size: 1.1em;
+			margin-right: 60px;
+		}
+	</style>
+	<script></script>
+	<script>
+		$(document).ready(function(){
+			$('.img-footer').click(function(){
+				window.location = "Not-found.html"
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div id="container">
+		<div id="signin">
+			<h1>Sign Up</h1>
+			<p id="p">Join now to get the latest wellness trends, clean-eating tips, workout videos, fitness challenges, and more straight to your inbox</p>
+			<a href="javascript:" target="_parent" style="text-decoration: none;"><div class="sign">
+				<span class="signin-logo">f</span> Sign Up with Facebook
+			</div></a>
+			<a href="javascript:" target="_parent" style="text-decoration: none;"><div class="sign">
+				<span class="signin-logo">G</span> Sign Up with Google
+			</div></a>
+			<a href="sign_up.html" target="_parent" style="text-decoration: none;"><div class="sign">
+				<span class="signin-logo"><img src="images/mail.png" alt="mail" width="20" height="20"></span> Sign Up with Email
+			</div></a>
+		</div>
+		<div id="signup">Have an account? <a href="Sign_in.html" target="_parent" id="signupgo">Sign in</a></div>	
+	</div>
+	<div class="footer">
+		<img src="images/fb.svg" alt="facebook" class="img-footer">
+		<img src="images/tw.svg" alt="facebook" class="img-footer">
+		<img src="images/yo.svg" alt="facebook" class="img-footer">
+		<img src="images/in.svg" alt="facebook" class="img-footer">
+		<img src="images/p.svg" alt="facebook" class="img-footer">
+		<img src="images/insta.svg" alt="facebook" class="img-footer">
+		<div id="copyright">Copyright 2021 FITNESS CLUB Inc. All rights reserved.</div>
+		<div id="final"><a href="About.html" target="_parent">About Fitness club</a><a href="Not-found.html" target="_blank">Privacy Policy</a><a href="Not-found.html" target="_blank">Terms of Service</a></div>
+	</div>
+</body>
+</html>

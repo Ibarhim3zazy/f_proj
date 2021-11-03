@@ -1,0 +1,248 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Log_in</title>
+	<style>
+		body
+		{
+			margin: 0px;
+			background-color: #e4e2e3;
+			font-family: poppins , avenir;
+			font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif" ,Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		}
+		#container
+		{
+			width: 70%;
+			height: auto;
+			padding: 50px;
+			margin: auto;
+		}
+		#login
+		{
+			width: 40%;
+			height: auto;
+			padding-bottom: 20px;
+			border-style: outset;
+			border-width: thin;
+			border-radius: 25px;
+			margin: auto;
+			text-align: center;
+			background-color: #fff;
+		}
+		#signup
+		{
+			width: 300px;;
+			height: auto;
+			margin: auto;
+			margin-top: 40px;
+			color: #000a;
+			text-align: center;
+		}
+		#signupgo
+		{
+			color: #0007;
+			transition: .5s;
+		}
+		#signupgo:hover
+		{
+			transition: .5s;
+			color: #000;
+		}
+		.log-text
+		{
+			text-align: left;
+			margin-left: 15px
+		}
+		.log-input
+		{
+			width: 300px;
+			height: 40px;
+			border-radius: 3px;
+			border-style: solid;
+			border-width: 1.9px;
+		}
+		.log-input:hover
+		{
+			background-color: #0095eb21;
+		}
+		.alert
+		{
+			width: 305px;
+			height: 40px;
+			border-style: none;
+			border-radius: 2px;
+			background-color: #f033;
+			margin: auto;
+			padding-top: 10px;
+			font-size: 1.2em;
+		}
+		.aler-logo
+		{
+			width: 20px;
+			height: 20px;
+			margin-right: 10px;
+			margin-bottom: -3px;
+		}
+		#keep
+		{
+			margin-left: 10px;
+			text-align: left;
+			font-size: 1.1em;
+			color: #000c;
+		}
+		#keeptxt
+		{
+			margin: 0px 10px 0px 10px;
+		}
+		#log-botton
+		{
+			width: 300px;
+			height: 45px;
+			background: linear-gradient(to left, #f66432, #ea1c60);
+			color: #fff;
+			border-radius: 3px;
+			border-style: solid;
+			border-width: 1.9px;
+			transition: .5s;
+			font-size: 1em;
+		}
+		#log-botton:hover
+		{
+			background: #272828;
+			transition: .5s;
+		}
+		#log-botton:focus
+		{
+			outline: none;
+		}
+		#log-botton:active
+		{
+			position: relative;
+			top: 5px;
+		}
+		#forgetpass
+		{
+			margin-top: 20px;
+			color: #0007;
+			transition: .5s;
+			display: inline-block;
+		}
+		#forgetpass:hover
+		{
+			transition: .5s;
+			color: #000;
+		}
+		.footer
+		{
+			width: 100%;
+			height: auto;
+			display: block;
+			padding-top: 50px;
+			text-align: center;
+			background: #e4e2e3;
+		}
+		.img-footer
+		{
+			width: 40px;
+			height: 40px;
+			padding: 5px;
+			margin-right: 25px;
+			cursor: pointer;
+			border-radius: 10px;
+			
+		}
+		.img-footer:hover
+		{
+			background-color:  #B0D9E4;
+		}
+		#copyright
+		{
+			width: 500px;
+			height: auto;
+			display: block;
+			padding-top: 20px;
+			margin: auto;
+			color: #677FD5;
+		}
+		#final
+		{
+			padding-top: 20px;
+			padding-bottom: 40px;
+			margin: auto;
+			color: #677FD5;
+		}
+		#final a
+		{
+			text-decoration: none;
+			color: #677FD5;
+			font-size: 1.1em;
+			margin-right: 60px;
+		}
+	</style>
+	<script src="jquery-3.5.1.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.img-footer').click(function(){
+				window.location = "Not-found.html"
+			});
+			$('#log-botton').click(function(){
+				//alert(document.lastModified);
+				if (document.getElementById('email').value == "")
+					{
+						$('#email').css({"border-color": "red", "border-width": "2px"});
+					};
+				if (document.getElementById('email').value != "")
+					{
+						$('#email').css({"border-color": "#0008", "border-width": "1px"});
+					}
+				if (document.getElementById('pass').value == "")
+					{
+						$('#pass').css({"border-color": "red", "border-width": "2px"});
+					};
+				if (document.getElementById('pass').value != "")
+					{
+						$('#pass').css({"border-color": "#0008", "border-width": "1px"});
+					}
+				/*if(window.history.go(-1) == 'file:///H:/Course/proj/My_profile_security.html')
+				   {
+				   window.location= "change-pass.html";
+				   }*/
+				if (document.getElementById('email').value != "" && document.getElementById('pass').value != "")
+				{
+					window.location= "home.html";
+				}
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div id="header"></div>
+	<div id="container">
+		<div id="login">
+			<h1>Sign in with Email</h1>
+			<h3 class="log-text">Email address</h3>
+			<input type="email" placeholder="Yourname@example.com" id="email" class="log-input">
+			<div id="contalerte"></div>
+			<h3 class="log-text">Password</h3>
+			<input type="password" id="pass" class="log-input">
+			<div id="contalertp"></div>
+			<p id="keep"><input type="checkbox"><span id="keeptxt">Keep me signed in</span><img src="images/Q.png" alt="Q" width="15"></p>
+			<a href="home.html" target="_parent"><input type="button" value="SIGN IN" id="log-botton"></a>
+			<div><a href="Not-found.html" target="_parent" id="forgetpass">Forgot your password?</a></div>	
+		</div>
+		<div id="signup">Don't have an account? <a href="sign-up.html" target="_parent" id="signupgo">Sign Up</a></div>	
+	</div>
+	<div class="footer">
+		<img src="images/fb.svg" alt="facebook" class="img-footer">
+		<img src="images/tw.svg" alt="facebook" class="img-footer">
+		<img src="images/yo.svg" alt="facebook" class="img-footer">
+		<img src="images/in.svg" alt="facebook" class="img-footer">
+		<img src="images/p.svg" alt="facebook" class="img-footer">
+		<img src="images/insta.svg" alt="facebook" class="img-footer">
+		<div id="copyright">Copyright 2021 FITNESS CLUB Inc. All rights reserved.</div>
+		<div id="final"><a href="About.html" target="_parent">About Fitness club</a><a href="Not-found.html" target="_blank">Privacy Policy</a><a href="Not-found.html" target="_blank">Terms of Service</a></div>
+	</div>
+</body>
+</html>

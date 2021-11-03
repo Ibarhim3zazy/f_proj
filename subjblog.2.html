@@ -1,0 +1,732 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>subjblog.2</title>
+	<style>
+		*
+		{
+			font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif" ,Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		}
+		body
+		{
+			margin: 0px;
+			background-image: url("images/movearm.jpg");
+			background-size: cover;
+			background-attachment: fixed;
+		}
+		.header
+		{
+			width: 100%;
+			height: 70px;
+			margin: 0px;
+			box-shadow: 0px 0px 5px 0px;
+			background: #e4e2e3;
+			position: fixed;
+			z-index: 999;
+		}
+		.img
+		{
+			float: left;
+			margin-left: 100px;
+			margin-top: 17px;
+			font-family: avenir;
+			font-size: 30px;
+		}
+		.menuu
+		{
+			float: right;
+			width: 600px;
+			height: 70px;
+			margin-top: 7px;
+		}
+		.menuu a
+		{
+			width: 120px;
+			height: 40px;
+			text-align: center;
+			padding-top: 15px;
+			float: left;
+			font-family: poppins;
+			color: #000;
+			text-decoration: none;
+			font-size: 17px;
+		}
+		.menuu a:hover
+		{
+			font-size: 1.2em;
+			border-bottom-style: solid;
+			border-bottom-color: gray;
+			border-bottom-width: 6px;
+			transition: .2s;
+			background-color: #3A3A3A99;
+			border-radius: 5px;
+			color: #fff;
+		}
+		#proff
+		{
+			width: 40px;
+			height: 40px;
+			float: right;
+			margin-right: 20px;
+			margin-top: 5px;
+			border-radius: 180px;
+			background-image: url("images/prof.png");
+			background-size: cover;
+			background-color: #8B8A8A88;
+		}
+		#proff:hover
+		{
+			background-color: #8B8A8A;
+			cursor: pointer;
+		}
+		#search-con
+		{
+			width: 30px;
+			height: 30px;
+			float: right;
+			margin-right: 20px;
+			margin-top: 10px;
+		}
+		#search
+		{
+			width: 30px;
+			height: 30px;
+			float: right;
+			margin-right: 20px;
+			position: relative;
+			left: 15px;
+		}
+		#search-con input
+		{
+			width: 0px;
+			height: 35px;
+			border-radius: 20px;
+			border-style: solid;
+			border-width: 1.5px;
+			transition: .5s;
+			position: absolute;
+			right: 80px;
+			top: 12px;
+			display: none;
+		}
+		#search-con input:focus
+		{
+			outline: none;
+		}
+		#sign-con
+		{
+			float: left;
+			margin: 15px 0px 0px 15px;
+		}
+		#signinn
+		{
+			width: 70px;
+			height: 30px;
+			border-radius: 10px;
+			border: none;
+			margin-right: 5px;
+			background-color: #E1ECF4;
+			color: #5F8FB1;
+			font-size: .9em;
+		}
+		#signinn:hover
+		{
+			background-color: #C7F4F3;
+			cursor: pointer;
+		}
+		#signinn:focus
+		{
+			outline: none;
+		}
+		#signinn:active
+		{
+			position: relative;
+			top: 2px;
+		}
+		#signupp
+		{
+			width: 70px;
+			height: 30px;
+			border: none;
+			border-radius: 10px;
+			background-color: #0095FF;
+			color: #fff;
+			font-size: .9em;
+		}
+		#signupp:hover
+		{
+			background-color: #0287FF;
+			cursor: pointer;
+		}
+		#signupp:focus
+		{
+			outline: none;
+		}
+		#signupp:active
+		{
+			position: relative;
+			top: 2px;
+		}
+		#backgroundheader
+		{
+			background-image: linear-gradient(to right bottom, #272828, #27282833);
+			width: 100%;
+			height: 200px;
+			padding: 100px 0px;
+			margin-bottom: 70px;
+			position: relative;
+			top: 70px;
+		}
+		.h1
+		{
+			margin: -30px 0px 0px 90px;
+			width: 50%;
+			height: 80px;
+			text-indent: -8px;
+			color: #fff;
+			font-size: 3em;
+		}
+		.text1
+		{
+			margin: 180px 0px 0px 50px;
+			width: 600px;
+			height: 50px;
+			color: #fff;
+			text-align: center;
+			font-weight: lighter;
+			font-size: 1.2em;
+		}
+		#container
+		{
+			width: 100vw;
+			height: auto;
+			background-color: #e4e2e3;
+		}
+		#social
+		{
+			width: 50px;
+			height: auto;
+			margin: 130px 0px 60px 0px;
+			float: left;
+			position: sticky;
+			top: 100px;
+		}
+		.logo
+		{
+			width: 5px;
+			height: 5px;
+			margin-left: -5px;
+			margin-top: 5px;
+			padding: 5px 12px;
+			background-color: #000b;
+			color: #fff;
+			border-radius: 5px;
+			text-decoration: none;
+			font-size: 20px;
+		}
+		.logo:hover
+		{
+			transition: 1s;
+			background-color: #0412F7c9;
+		}
+		.like
+		{
+			width: 20px;
+			height: 60px;
+			margin-left: -5px;
+			text-decoration: none;
+			font-size: 1.2em;
+			color: #000;
+		}
+		#tlike
+		{
+			margin-left: -10px;
+		}
+		.tlike
+		{
+			width: 20px;
+			height: 20px;
+			display: block;
+			margin-top: 20px;
+			margin-left: 0px;
+		}
+		#like, .side
+		{
+			width: 20px;
+			height: 70px;
+			margin-left: 70px;
+			margin-top: 10px;
+			padding: 10px 15px;
+			background-color: #fff;
+			border-radius: 5px;
+			border: solid;
+			border-width: 1.8px;
+		}
+		#heart
+		{
+			width: 20px;
+			height: 20px;
+			background-color: #fff;
+			border-radius: 180px;
+			transition: 1s;
+		}
+		#commentgo
+		{
+			width: 64px;
+			height: 70px;
+			margin: 0px;
+			padding: 0px;
+			transform: translate(-22px ,-17px)
+		}
+		.commentgo
+		{
+			width: auto;
+			height: auto;
+			margin-left: -14px;
+			text-decoration: none;
+			font-size: .7em;
+			color: #000;
+			display: inline-block;
+			position: relative;
+			top: -20px;
+		}
+		.subject
+		{
+			width: 50%;
+			height: auto;
+			padding: 20px;
+			border-radius: 20px;
+			margin: 100px 0px 0px 100px;
+			background-color: #fff;
+			float: left;
+		}
+		.onsub
+		{
+			font-size: 1.3em;
+		}
+		#lastonsub
+		{
+			font-weight: bolder;
+			font-size: 1.4em;
+		}
+		#lastonsub a
+		{
+			text-decoration-color: darkgreen;
+			color: #0005;
+			transition: 1s;
+		}
+		#lastonsub a:hover
+		{
+			transition: 1s;
+			color: darkgreen;
+		}
+		.ad
+		{
+			width: 300px;
+			height: 422px;
+			margin: 120px 50px 60px 0px;
+			background-color: #fff;
+			border-radius: 10px;
+			float: right;
+			position: sticky;
+			top: 100px;
+		}
+		.soon
+		{
+			width: 80px;
+			height: 40px;
+			font-size: .9em;
+			margin: 5px 0px 0px 260px;
+			color: #272828;
+			text-decoration: none;
+			transition: .5s;
+		}
+		.imgsoon
+		{
+			width: 100%;
+			height: 400px;
+			border-radius: 5px;
+			opacity: 1;
+			display: flex;
+		}
+		.comsoon
+		{
+			width: 100%;
+			height: 100%;
+			border-radius: 5px;
+			background-color: #000;
+			opacity: .4;
+			position: relative;
+			top: -422px;
+		}
+		#comment
+		{
+			width: 50%;
+			height: 100px;
+			margin:20px 0px 20px 150px;
+			border-radius: 5px;
+		}
+		#comment:hover
+		{
+			background-color: #0095eb21;
+		}
+		#comment:focus
+		{
+			outline: none;
+		}
+		#commentpost
+		{
+			display: none;
+		}
+		#postcomment
+		{
+			width: 150px;
+			height: 30px;
+			border-radius: 15px;
+			margin-left: 680px;
+			margin-bottom: 20px;
+			border: none;
+			background: linear-gradient(to left, #f66432, #ea1c60);
+			color: #fff;
+			transition: 1s;
+		}
+		#postcomment:hover
+		{
+			background: #272828;
+			transition: 1s;
+		}
+
+		#postcomment:focus
+		{
+			outline: none;
+		}
+		#postcomment:active
+		{
+			position: relative;
+			top: 5px;
+		}
+		#tname
+		{
+			width: 40%;
+			height: 30px;
+			margin: 0px 0px 20px 180px;
+			border-radius: 5px;
+			border-style: solid;
+			border-width: 1.5px;
+		}
+		#tname:hover
+		{
+			background-color: #0095eb21;
+		}
+		#tname:focus
+		{
+			outline: none;
+		}
+		.commented
+		{
+			width: 40%;
+			height: auto;
+			margin: 20px 0px 20px 180px;
+			padding: 10px;
+			background-color: #fff9;
+			border-style: inset;
+			border-radius: 15px;
+			color: #000;
+			transition: 1s;
+			display: inline-block;
+		}
+		.name
+		{
+			width: auto;
+			height: auto;
+			font-weight: bolder;
+			margin: -5px 5px 5px -2px;
+			text-indent: -5px;
+			display: inline-block;
+		}
+		.footer
+		{
+			width: 100vw;
+			height: auto;
+			display: block;
+			padding-top: 50px;
+			text-align: center;
+			background: #e4e2e3;
+		}
+		.img-footer
+		{
+			width: 40px;
+			height: 40px;
+			padding: 5px;
+			margin-right: 25px;
+			cursor: pointer;
+			border-radius: 10px;
+
+		}
+		.img-footer:hover
+		{
+			background-color:  #B0D9E4;
+		}
+		#copyright
+		{
+			width: 500px;
+			height: auto;
+			display: block;
+			padding-top: 20px;
+			margin: auto;
+			color: #677FD5;
+		}
+		#final
+		{
+			padding-top: 20px;
+			padding-bottom: 40px;
+			margin: auto;
+			color: #677FD5;
+		}
+		#final a
+		{
+			text-decoration: none;
+			color: #677FD5;
+			font-size: 1.1em;
+			margin-right: 60px;
+		}
+	</style>
+	<script src="jquery-3.5.1.js"></script>
+	<script src="scrollreveal.js"></script>
+	<script>
+			count =0;
+			$(document).ready(function(){
+				$('.img-footer').click(function(){
+					window.location = "Not-found.html"
+				});
+				$('.search').mouseover(function(){
+				$('#search-con input').css({"transition": ".5s","width": "300px","abs": "absolute","right": "80px","top": "12px","display": "inline-block"});
+			});
+			$('.search').mouseleave(function(){
+				$('#search-con input').css({"transition": ".5s","width": "0px","display": "none"});
+			});
+			$('#proff').click(function(){
+				window.location = "My_profile.html";
+			});
+			$('.comsoon').mouseover(function(){
+				$(this).css({"display": "none"});
+			});
+
+			$('.ad').mouseleave(function(){
+				$('.comsoon').css({"display": "block"});
+			});
+
+			$('.soon').click(function(){
+				alert("We cann't open it.")
+			});
+			document.getElementById('like').innerHTML +="<a href='javascript: f2(\"id"+count+"\")' class='like' ><img src='images/like.png' alt='heart' id='heart'></div><span id='id"+count+"'>0</span> <br> <span id='tlike'>likes</span></a>";
+			$('.like').click(function(){
+				$('#heart').css({"background-color": "red"});
+			});
+			$('.like').mouseover(function(){
+				$('#heart').css({"background-color": "red","transition": "1s"});
+			});
+
+			$('.like').mouseleave(function(){
+				$('#heart').css({"background-color": "#fff","transition": "1s"});
+			});
+			$('#comment').click(function(){
+				$('#commentpost').css({"display": "inline-block"});
+			});
+			const sr = ScrollReveal({
+			origin: 'top',
+			distance: '30px',
+			duration: 1500,
+			reset: true
+			});
+		sr.reveal(`.h1, .text1, .onsub, .any1,
+					#comment,
+					#lastonsub, .any2, #end`,
+				  {
+    				interval: 200
+				  });
+		});
+
+		function commentt()
+		{
+			if(document.getElementById('tname').value !== "" && document.getElementById('comment').value !== "")
+			{
+			name = document.getElementById('tname').value;
+			comment = document.getElementById('comment').value;
+			document.getElementById('commented').innerHTML +="<p class='commented'><span class='name'>By: "+name+"</span><br>"+comment+"</p>";
+				$('#tname').css({"border-color": "#0008", "border-width": "1px"});
+				$('#comment').css({"border-color": "#0008", "border-width": "1px"});
+			}
+			if (document.getElementById('tname').value == "")
+			{
+				$('#tname').css({"border-color": "red", "border-width": "2px"});
+			}
+			if (document.getElementById('comment').value == "")
+			{
+				$('#comment').css({"border-color": "red", "border-width": "2px"});
+			}
+			if (document.getElementById('tname').value != "")
+			{
+				$('#tname').css({"border-color": "#0008", "border-width": "1px"});
+			}
+			if (document.getElementById('comment').value != "")
+			{
+				$('#comment').css({"border-color": "#0008", "border-width": "1px"});
+			}
+		}
+
+		function f2(x)
+		{
+			z = document.getElementById(x).innerHTML;
+			z++;
+			document.getElementById(x).innerHTML = z;
+		}
+	</script>
+</head>
+
+<body>
+	<div class="header">
+		<div id="sign-con">
+			<a href="Sign_in.html"><input type="button" value="Log in" id="signinn"></a>
+			<a href="sign-up.html"><input type="button" value="Sign up" id="signupp"></a>
+		</div>
+		<b class="img"> F I T N E S S  C L U B </b>
+		<div class="menuu">
+			<a href="home.html"> Home </a>
+			<a href="Blog.html"> Blog </a>
+			<a href="About.html"> About </a>
+			<a href="Contact-Us.html"> Contact us</a>
+			<div><div id="proff"></div><div id="search-con"><input type="text" placeholder="Search" class="search"><img src="images/search.png" alt="search" id="search" class="search"></div></div>
+		</div>
+	</div>
+	<div id="backgroundheader">
+		<h1 class="h1">You Can Do This 10-Move Arm Workout At Home—No Weights Required</h1>
+		<p class="text1">Bonus: You'll work your abs, too.</p>
+	</div>
+	<div id="container">
+	<div id="social">
+		<div class="side"><a href="https://www.facebook.com/Ibrahim.3zazy" target="_blank" title="Facebook" class="logo">f</a><span class="tlike">FB</span></div>
+		<div id="like"></div>
+		<div class="side"><a href="#comment"><img src="images/comment.png" alt="comment" id="commentgo"><span class="commentgo">Comment</span></a></div>
+	</div>
+	<div class="subject">
+		<p class="onsub">
+		Traditional arm exercises like bicep curls and shoulder presses work great for strengthening the upper body—but they usually require some weights to get the best benefit. So what if you want an efficient, effective workout, without having to worry about equipment (like, when you’re traveling, have limited space, or just can’t make it to the gym)? Enter, bodyweight arm exercises.
+		</p>
+
+		<p class="onsub">Just a quick FYI: Arm strength is important—strong arms and shoulders help you move more comfortably throughout daily life, Roxie Jones, NASM-CPT, personal trainer and SoulCycle instructor, tells Health. Just think about how many times you open and close doors, carry groceries, push yourself up out of bed, or lift a suitcase into the overhead compartment. All these moves will feel much easier if you’ve been training your upper body—even without weights.
+		</p>
+
+		<p class="onsub">Pushing, pulling, and holding your own bodyweight takes some serious work and requires strength and stability. Plus, if you’re new to strength training, starting with exercises sans equipment is the smartest thing to do. “I always recommend mastering bodyweight exercises before moving on to actual weights,” Jones says. It’s important to get comfortable with an exercise and nail proper form before adding any external resistance—that’s one surefire strategy for sidestepping injury.
+		</p>
+		<p class="onsub">
+		To get you building up your upper body, try these 10 bodyweight arm exercises from Jones. Do them in your living room, hotel room, or wherever else you feel like you need to get a quick workout in.
+		</p>
+		<h1 class="any1">The Workout</h1>
+		<p class="onsub">
+			Do the arm exercises below anytime and anywhere you have enough space to plank. They all target your arms—specifically, triceps, biceps, and shoulders—but many of them also work your core, glutes, chest, and back muscles, too. (Your abs will definitely be on fire with all the planking.) Pick four or five exercises to do circuit-style, either for time (anywhere from 30-60 seconds) or reps (aim for 10-12). Complete the entire circuit 2-4 times, depending on how long you want to work out. If you’re at the gym and want to grab the weights after, Jones suggests using these moves as your warm-up.
+		</p>
+		<h1 class="any1">Tricep Dip</h1>
+		<img src="images/Tricep Dip.jpg" width="500" height="300" alt="Tricep Dip" class="any2">
+			<ol class="onsub">
+				<li>Sit on the floor with knees bent and feet flat. Place hands behind you, elbows bent, wrists underneath shoulders, and fingertips facing in toward body. Straighten arms and lift butt off the floor.</li>
+				<li>Slowly bend elbows to lower body toward the floor.</li>
+				<li>Straighten arms again, using triceps to push yourself up. Repeat.</li>
+			</ol>
+		<h1 class="any1">Reverse Plank</h1>
+		<img src="images/Reverse Plank.jpg" width="500" height="300" alt="Tricep Dip" class="any2">
+			<ol class="onsub">
+				<li>Sit on the floor with legs extended in front of you. Place hands slightly behind you, palms on the floor underneath shoulders, fingertips facing in toward body.</li>
+				<li>Press into palms to lift hips and torso off the floor. Keep arms and legs straight and make sure abs and glutes are engaged. Pause for a few seconds.</li>
+				<li>Lower back down to the ground. Repeat.</li>
+			</ol>
+		<h1 class="any1">Eccentric Push-Up</h1>
+		<img src="images/Eccentric Push-Up.jpg" width="500" height="300" alt="Tricep Dip" class="any2">
+			<ol class="onsub">
+				<li>Start in a high plank position with hands flat on the floor about shoulder-width apart, and wrists stacked under shoulders.</li>
+				<li>Keeping body in one long line from shoulders to heels, bend elbows at a 45-degree angle to your body as you take 3-4 seconds to lower toward the floor.</li>
+				<li>With knees on the floor, press through palms to push back up to start.</li>
+				<li>Bring knees up to a high plank and repeat.</li>
+			</ol>
+		<h1 class="any1">Plank Shoulder Tap</h1>
+		<img src="images/Plank Shoulder Tap.png" width="500" height="300" alt="Tricep Dip" class="any2">
+			<ol class="onsub">
+				<li>Start in a high plank position with hands flat on the floor about shoulder-width apart, wrists stacked under shoulders.</li>
+				<li>Tap right hand to left shoulder, then return to start, keeping abs and glutes engaged to keep hips as stable as possible.</li>
+				<li>Repeat, tapping left hand to right shoulder. Continue alternating.</li>
+			</ol>
+		<h1 class="any1">Triceps push-up</h1>
+		<img src="images/Triceps push-up.jpg" width="500" height="300" alt="Tricep Dip" class="any2">
+			<ol class="onsub">
+				<li>Start in a high plank position with hands flat on the floor about shoulder-width apart, wrists stacked under shoulders. Rotate elbows so that the insides face in front of you.</li>
+				<li>Keeping elbows close to your sides and your body in one straight line from shoulders to heels, bend arms behind you and lower to the floor. Maintain a straight line from shoulders to heels. Elbows should squeeze in tight toward body.</li>
+				<li>Press through palms to push back up to start. Repeat.</li>
+			</ol>
+		<h1 class="any1">Hand Release Push-Up with Reach</h1>
+		<img src="images/Hand Release Push-Up with Reach.jpg" width="500" height="300" alt="Tricep Dip" class="any2">
+			<ol class="onsub">
+				<li>Start in a high plank position with hands flat on the floor about shoulder-width apart, wrists stacked under shoulders.</li>
+				<li>Keeping your body in one straight line from shoulders to heels, bend elbows at a 45-degree angle to your body, and lower to the floor with control.</li>
+				<li>Rest chest on the ground and squeeze shoulder blades together to lift hands an inch or two off the floor. Then, reach arms out in front of you.</li>
+				<li>Next, pull elbows back in toward chest and place palms back underneath shoulders.</li>
+				<li>Press through palms to push back up to start. Repeat.</li>
+			</ol>
+		<h1 class="any1">Up-Down Plank</h1>
+		<img src="images/Up-Down Plank.png" width="500" height="300" alt="Tricep Dip" class="any2">
+			<ol class="onsub">
+				<li>Start in a high plank position with hands flat on the floor about shoulder-width apart, wrists stacked under shoulders.</li>
+				<li>Place right forearm down on the ground, maintaining a plank. Then come down to left forearm and pause in a forearm plank.</li>
+				<li>Press back into right hand, then left hand to return to a high plank. Move as quickly as you can while keeping abs and glutes engaged, hips stable, and a straight line from shoulders to heels.</li>
+				<li>Repeat, alternating which arm you start with each time.</li>
+			</ol>
+		<h1 class="any1">Plank with Bodyweight Row</h1>
+		<img src="images/Plank with Bodyweight Row.jpg" width="500" height="300" alt="Tricep Dip" class="any2">
+			<ol class="onsub">
+				<li>Start in a high plank position with hands flat on the floor about shoulder-width apart, wrists stacked under shoulders.</li>
+				<li>Pull right elbow back so hand reaches chest, engaging the lats (mid-back) as you go. Pause at the top, then place back down on ground.</li>
+				<li>Repeat with left elbow, alternating sides.</li>
+			</ol>
+		<h1 class="any1">Forearm Side Plank with Rotation</h1>
+		<img src="images/Forearm Side Plank with Rotation.jpg" width="500" height="300" alt="Tricep Dip" class="any2">
+			<ol class="onsub">
+				<li>Start lying on left side with left elbow stacked underneath left shoulder, forearm on the floor, legs extended and hips and knees stacked. Engage abs and glutes and extend right arm toward the ceiling. Press through left forearm to lift hips toward the ceiling. This is your starting position.</li>
+				<li>Rotate torso toward the floor as you thread right arm underneath your body.</li>
+				<li>Rotate back to start, bringing right arm back toward the ceiling. Repeat. Then switch sides.</li>
+			</ol>
+		<h1 class="any1">Superwoman</h1>
+		<img src="images/Superwoman.jpg" width="500" height="300" alt="Tricep Dip" class="any2">
+			<ol class="onsub">
+				<li>Start lying on stomach, arms and legs extended.</li>
+				<li>Lift arms, shoulders, chest, and legs off the floor and hold. Squeeze glutes and keep your gaze toward the floor so neck stays neutral.</li>
+				<li>Then lower back down to the floor. Repeat.</li>
+			</ol>
+		<p id="lastonsub">
+			To get our top stories delivered to your inbox, sign up for the <a href="index.html" target="_blank">FITNESS CLUB</a> Living newsletter
+		</p>
+	</div>
+		<div class="ad">
+			<a href="javascript:" target="_parent" class="soon">Soon<img src="images/ad.jpg" class="imgsoon" alt="read"></a>
+			<div class="comsoon"></div>
+		</div>
+	<div id="commented"></div>
+	<div>
+		<textarea placeholder="Comment" id="comment"></textarea>
+	</div>
+	<div id="commentpost">
+		<input type="text" placeholder="Name (requird)" id="tname"><input type="button" value="Post Comment" onclick="commentt()" id="postcomment">
+	</div>
+	</div>
+	<div class="footer">
+		<img src="images/fb.svg" alt="facebook" class="img-footer">
+		<img src="images/tw.svg" alt="facebook" class="img-footer">
+		<img src="images/yo.svg" alt="facebook" class="img-footer">
+		<img src="images/in.svg" alt="facebook" class="img-footer">
+		<img src="images/p.svg" alt="facebook" class="img-footer">
+		<img src="images/insta.svg" alt="facebook" class="img-footer">
+		<div id="copyright">Copyright 2021 FITNESS CLUB Inc. All rights reserved.</div>
+		<div id="final"><a href="About.html" target="_parent">About Fitness club</a><a href="Not-found.html" target="_blank">Privacy Policy</a><a href="Not-found.html" target="_blank">Terms of Service</a></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,275 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sign_up</title>
+	<style>
+		body
+		{
+			margin: 0px;
+			background-color: #e4e2e3;
+			font-family: poppins , avenir;
+			font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif" ,Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		}
+		#container
+		{
+			width: 70%;
+			height: auto;
+			padding: 50px;
+			margin: auto;
+		}
+		#signupinfo
+		{
+			width: 40%;
+			height: auto;
+			padding-bottom: 20px;
+			margin-left: -100px;
+			border-style: outset;
+			border-width: thin;
+			border-radius: 25px;
+			text-align: center;
+			background-color: #fff;
+			display: inline-block;
+		}
+		.signup-input
+		{
+			width: 300px;
+			height: 40px;
+			border-radius: 3px;
+			border-style: solid;
+			border-width: 1.9px;
+			margin-top: 20px;
+		}
+		.signup-input:hover
+		{
+			background-color: #0095eb21;
+		}
+		#signup-botton
+		{
+			width: 300px;
+			height: 45px;
+			background: linear-gradient(to left, #f66432, #ea1c60);
+			color: #fff;
+			border-radius: 3px;
+			border-style: solid;
+			border-width: 1.9px;
+			transition: .5s;
+			font-size: 1em;
+			margin-top: 20px;
+		}
+		#signup-botton:hover
+		{
+			background: #272828;
+			transition: .5s;
+		}
+		#signup-botton:focus
+		{
+			outline: none;
+		}
+		#signup-botton:active
+		{
+			position: relative;
+			top: 5px;
+		}
+		#signin
+		{
+			width: 300px;
+			height: auto;
+			margin: auto;
+			margin-top: 40px;
+			color: #000a;
+			text-align: center;
+		}
+		#signingo
+		{
+			color: #0007;
+			transition: .5s;
+		}
+		#signingo:hover
+		{
+			transition: .5s;
+			color: #000;
+		}
+		#vid
+		{
+			width: 600px;
+			height: auto;
+			border-radius: 100px;
+			margin-right: -120px;
+			margin-bottom: 80px;
+			display: inline-block;
+			float: right;
+			position: sticky;
+			top: 80px;
+		}
+		.footer
+		{
+			width: 100%;
+			height: auto;
+			display: block;
+			padding-top: 50px;
+			text-align: center;
+			background: #e4e2e3;
+		}
+		.img-footer
+		{
+			width: 40px;
+			height: 40px;
+			padding: 5px;
+			margin-right: 25px;
+			cursor: pointer;
+			border-radius: 10px;
+			
+		}
+		.img-footer:hover
+		{
+			background-color:  #B0D9E4;
+		}
+		#copyright
+		{
+			width: 500px;
+			height: auto;
+			display: block;
+			padding-top: 20px;
+			margin: auto;
+			color: #677FD5;
+		}
+		#final
+		{
+			padding-top: 20px;
+			padding-bottom: 40px;
+			margin: auto;
+			color: #677FD5;
+		}
+		#final a
+		{
+			text-decoration: none;
+			color: #677FD5;
+			font-size: 1.1em;
+			margin-right: 60px;
+		}
+	</style>
+	<script src="jquery-3.5.1.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.img-footer').click(function(){
+				window.location = "Not-found.html"
+			});
+			$('#signup-botton').click(function(){
+				if (document.getElementById('First-Name').value == "")
+					{
+						$('#First-Name').css({"border-color": "red", "border-width": "2px"});
+					};
+				if (document.getElementById('First-Name').value != "")
+					{
+						$('#First-Name').css({"border-color": "#0008", "border-width": "1px"});
+					}
+				if (document.getElementById('Last-Name').value == "")
+					{
+						$('#Last-Name').css({"border-color": "red", "border-width": "2px"});
+					};
+				if (document.getElementById('Last-Name').value != "")
+					{
+						$('#Last-Name').css({"border-color": "#0008", "border-width": "1px"});
+					}
+				if (document.getElementById('Email').value == "")
+					{
+						$('#Email').css({"border-color": "red", "border-width": "2px"});
+					};
+				if (document.getElementById('Email').value != "")
+					{
+						$('#Email').css({"border-color": "#0008", "border-width": "1px"});
+					}
+				if (document.getElementById('Username').value == "")
+					{
+						$('#Username').css({"border-color": "red", "border-width": "2px"});
+					};
+				if (document.getElementById('Username').value != "")
+					{
+						$('#Username').css({"border-color": "#0008", "border-width": "1px"});
+					}
+				if (document.getElementById('Password').value == "")
+					{
+						$('#Password').css({"border-color": "red", "border-width": "2px"});
+					};
+				if (document.getElementById('Password').value != "")
+					{
+						$('#Password').css({"border-color": "#0008", "border-width": "1px"});
+					}
+				if (document.getElementById('Confirm-Password').value == "")
+					{
+						$('#Confirm-Password').css({"border-color": "red", "border-width": "2px"});
+					};
+				if (document.getElementById('Confirm-Password').value != "")
+					{
+						$('#Confirm-Password').css({"border-color": "#0008", "border-width": "1px"});
+					}
+				if (document.getElementById('Phone').value == "")
+					{
+						$('#Phone').css({"border-color": "red", "border-width": "2px"});
+					};
+				if (document.getElementById('Phone').value != "")
+					{
+						$('#Phone').css({"border-color": "#0008", "border-width": "1px"});
+					}
+				if (document.getElementById('date').value == "")
+					{
+						$('#date').css({"border-color": "red", "border-width": "2px"});
+					};
+				if (document.getElementById('date').value != "")
+					{
+						$('#date').css({"border-color": "#0008", "border-width": "1px"});
+					}
+				if (document.getElementById('First-Name').value != "" && document.getElementById('Last-Name').value != "" &&
+				    document.getElementById('Email').value != "" && document.getElementById('Username').value != "" &&
+				    document.getElementById('Password').value != "" && document.getElementById('Confirm-Password').value != "" &&
+				    document.getElementById('Phone').value != "" && document.getElementById('date').value != "" && 
+				    document.getElementById('Password').value === document.getElementById('Confirm-Password').value)
+				{
+					window.location= "log-in.html";
+				}
+				if (document.getElementById('Password').value !== document.getElementById('Confirm-Password').value)
+					{
+						alert("NOT MATCH");
+					}
+			 });
+		});
+	</script>
+</head>
+
+<body>
+	<div id="container">
+		<div id="signupinfo">
+			<h1>Join</h1>
+			<input type="text" placeholder="First Name" id="First-Name" class="signup-input">
+			<input type="text" placeholder="Last Name" id="Last-Name" class="signup-input">
+			<input type="email" placeholder="Email Address" id="Email" class="signup-input">
+			<input type="text" placeholder="Username" id="Username" class="signup-input">
+			<input type="password" placeholder="Password" id="Password" class="signup-input">
+			<input type="password" placeholder="Confirm Password" id="Confirm-Password" class="signup-input">
+			<input type="text" placeholder="Phone Number" id="Phone" class="signup-input">
+			<input type="date" id="date" class="signup-input">
+			<select class="signup-input" id="Gender">
+				<optgroup label="Gender">
+					<option>Male</option>
+					<option>Female</option>
+				</optgroup>
+			</select>
+			<a href="javascript:" target="_parent"><input type="button" value="SIGN UP" id="signup-botton"></a>
+		</div>
+		<video src="images/Fitness Training Intro0.mp4" id="vid" muted autoplay loop></video>
+		<div id="signin">Have an account? <a href="sign_in.html" target="_parent" id="signingo">Sign in</a></div>	
+	</div>
+	<div class="footer">
+		<img src="images/fb.svg" alt="facebook" class="img-footer">
+		<img src="images/tw.svg" alt="facebook" class="img-footer">
+		<img src="images/yo.svg" alt="facebook" class="img-footer">
+		<img src="images/in.svg" alt="facebook" class="img-footer">
+		<img src="images/p.svg" alt="facebook" class="img-footer">
+		<img src="images/insta.svg" alt="facebook" class="img-footer">
+		<div id="copyright">Copyright 2021 FITNESS CLUB Inc. All rights reserved.</div>
+		<div id="final"><a href="About.html" target="_parent">About Fitness club</a><a href="Not-found.html" target="_blank">Privacy Policy</a><a href="Not-found.html" target="_blank">Terms of Service</a></div>
+	</div>
+</body>
+</html>

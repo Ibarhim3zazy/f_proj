@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+	<style>
+		.body
+		{
+			margin: 0px;
+			background: #e4e2e3;
+		}
+		.header
+		{
+			width: 100%;
+			height: 70px;
+			margin: 0px;
+			box-shadow: 0px 0px 5px 0px;
+			background: #e4e2e3;
+			position: fixed;
+			z-index: 999;
+		}
+		.img
+		{
+			float: left;
+			margin-left: 100px;
+			margin-top: 17px;
+			font-family: avenir;
+			font-size: 30px;
+		}
+		.menu
+		{
+			float: right;
+			width: 600px;
+			height: 70px;
+			margin-top: 7px;
+		}
+		.menu a
+		{
+			width: 120px;
+			height: 40px;
+			text-align: center;
+			padding-top: 15px;
+			float: left;
+			font-family: poppins;
+			color: #000;
+			text-decoration: none;
+			font-size: 17px;
+		}
+		.menu a:hover
+		{
+			font-size: 1.2em;
+			border-bottom-style: solid;
+			border-bottom-color: gray;
+			border-bottom-width: 6px;
+			transition: .2s;
+			background-color: #3A3A3A99;
+			border-radius: 5px;
+			color: #fff;
+		}
+		#prof
+		{
+			width: 40px;
+			height: 40px;
+			float: right;
+			margin-right: 20px;
+			margin-top: 5px;
+			border-radius: 180px;
+			background-image: url("images/prof.png");
+			background-size: cover;
+			background-color: #8B8A8A88;
+		}
+		#prof:hover
+		{
+			background-color: #8B8A8A;
+			cursor: pointer;
+		}
+		#search-con
+		{
+			width: 30px;
+			height: 30px;
+			float: right;
+			margin-right: 20px;
+			margin-top: 10px;
+		}
+		#search
+		{
+			width: 30px;
+			height: 30px;
+			float: right;
+			margin-right: 20px;
+			position: relative;
+			left: 15px;
+		}
+		#search-con input
+		{
+			width: 0px;
+			height: 35px;
+			border-radius: 20px;
+			border-style: solid;
+			border-width: 1.5px;
+			transition: .5s;
+			position: absolute;
+			right: 80px;
+			top: 12px;
+			display: none;
+		}
+		#search-con input:focus
+		{
+			outline: none;
+		}
+		#sign-con
+		{
+			float: left;
+			margin: 15px 0px 0px 15px;
+		}
+		#signin
+		{
+			width: 70px;
+			height: 30px;
+			border-radius: 10px;
+			border: none;
+			margin-right: 5px;
+			background-color: #E1ECF4;
+			color: #5F8FB1;
+			font-size: .9em;
+		}
+		#signin:hover
+		{
+			background-color: #C7F4F3;
+			cursor: pointer;
+		}
+		#signin:focus
+		{
+			outline: none;
+		}
+		#signin:active
+		{
+			position: relative;
+			top: 2px;
+		}
+		#signup
+		{
+			width: 70px;
+			height: 30px;
+			border: none;
+			border-radius: 10px;
+			background-color: #0095FF;
+			color: #fff;
+			font-size: .9em;
+		}
+		#signup:hover
+		{
+			background-color: #0287FF;
+			cursor: pointer;
+		}
+		#signup:focus
+		{
+			outline: none;
+		}
+		#signup:active
+		{
+			position: relative;
+			top: 2px;
+		}
+		.txt
+		{
+			width: 600px;
+			height: 70px;
+			float: left;
+			margin :180px 0px 0px 120px;
+		}
+		.txt b
+		{
+			font-family: poppins-light;
+			font-size: 50px;
+			display: block;
+			color: #fff;
+		}
+		.button
+		{
+			width: 100px;
+			height: 40px;
+			background: #fb5607;
+			border: 0px;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+			border-bottom-left-radius: 10px;
+			border-bottom-right-radius: 10px;
+			margin: 350px 0px 0px 0px;
+			position: relative;
+			left: -250px;
+			color: #fff;
+			font-size: 17px;
+			float: left;
+			transition: 0.5s;
+			outline: none;
+		}
+		.button:active
+		{
+			position: relative;
+			top:2px;
+		}
+		.button:hover
+		{
+			background: #fff;
+			color: #000;
+			cursor: pointer;
+		}
+		.background
+		{
+			width: 100%;
+			height: 700px;
+			background: url("images/bl.png") no-repeat;
+			background-size: cover;
+			box-shadow: 1px 1px 10px 1px;
+			margin-bottom: 70px;
+			position: relative;
+			top: 70px;
+		}
+		.nutritioncontainer
+		{
+			width: 100%;
+			height: 500px;
+			margin-bottom:200px;
+			margin-top: 250px;
+			float: left;
+		}
+		.bimg
+		{
+			width: 500px;
+			height:500px;
+			float: left;
+			margin-top: 50px;
+		}
+		.titlee
+		{
+			font-size: 45px;
+			color: #272828;
+			font-family: poppins;
+			display: block;
+			float: left;
+			margin-top: 150px;
+		}
+		.titleee
+		{
+			font-size: 45px;
+			color: #fb5607;
+			font-family: poppins;
+			display: block;
+			float: left;
+			margin-left: 10px;
+			margin-top: 150px;
+		}
+		.titleeee
+		{
+			font-size: 45px;
+			color: #272828;
+			font-family: poppins;
+			display: block;
+			float: left;
+			margin-top: 150px;
+		}
+		.nutritiondiscription
+		{
+			display: block;
+			width: 100%;
+			font-size: 20px;
+			color: #272828;
+			float: left;
+			font-family: poppins;
+			font-weight: normal;
+		}
+		.discon
+		{
+			width: 550px;
+			height: 500px;
+			float: left;
+			margin-left: 200px;
+		}
+		.nutritionbutton
+		{
+			width: 100px;
+			height: 40px;
+			background: #fb5607;
+			border: 0px;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+			border-bottom-left-radius: 10px;
+			border-bottom-right-radius: 10px;
+			margin: 30px 0px 0px 555px;
+			position: relative;left: -250px;
+			color: #fff;
+			font-size: 17px;
+			float: left;
+			transition: 0.4s;
+			outline: none;
+		}
+		.nutritionbutton:hover
+		{
+			background: #272828;
+			color: #fff;
+		}
+		.nutritionbutton:active
+		{
+			position: relative;
+			top: 2px;
+		}
+		.fcc-container
+		{
+			width: 90%;
+			height: 500px;
+			float: left;
+			margin: 120px 0 100px 130px;
+		}
+		#fcc-img
+		{
+			float: left;
+			border-radius: 500px;
+		}
+		#fcc-title
+		{
+			text-transform: uppercase;
+			font-size: 35px;
+			color: #fb5607;
+			font-family: poppins;
+			float: left;
+			margin-left: 30px;
+			margin-top: 60px;
+			font-weight: 700;
+		}
+		.fcc-color-title
+		{
+			font-size: 35px;
+			color: #272828;
+			font-family: poppins;
+		}
+		#fcc-discription
+		{
+			font-size: 20px;
+			color: #272828;
+			font-family: poppins;
+			float: left;
+			margin: -35px 0px 0px  30px;
+		}
+		.fcc-button
+		{
+			width: 100px;
+			height: 40px;
+			background: #fb5607;
+			border: 0px;
+			border-radius: 10px;
+			margin: 5px 150px 0px 0px;
+			color: #fff;
+			font-size: 17px;
+			transition: 0.4s;
+			outline: none;
+			float: right;
+		}
+		.fcc-button:active
+		{
+			position: relative;
+			top:2px;
+		}
+		.fcc-button:hover
+		{
+			background: #272828;
+			color: #fff;
+		}
+		.bmr-container
+		{
+			width: 90%;
+			height: 500px;
+			float: left;
+			margin: 120px 0px 0px 110px;
+		}
+		.bmr-container p
+		{
+			width: 500px;
+			font-size: 20px;
+			color: #272828;
+			font-family: poppins;
+			float: left;
+			margin: 0px 400px 0px 100px ;
+		}
+		.bmr-container img
+		{
+			float: right;
+			margin: -250px 150px 0px 0px ;
+		}
+		.t1
+		{
+			text-transform: uppercase;
+			font-size: 35px;
+			color: #272828;
+			font-family: poppins;
+			float: left;
+			font-weight: 700;
+			margin: 50px 50px 0px 100px;
+		}
+		.t2
+		{
+			font-size: 35px;
+			color: #fb5607;
+			font-family: poppins;
+		}
+		.x
+		{
+			float: left;
+		}
+		.bmr-button
+		{
+			width: 100px;
+			height: 40px;
+			background: #fb5607;
+			border: 0px;
+			border-radius: 10px;
+			margin: 30px 0px 0px 450px;
+			color: #fff;
+			font-size: 17px;
+			transition: 0.4s;
+			outline: none;
+			float: left;
+		}
+		.bmr-button:active
+		{
+			position: relative;
+			top:2px;
+		}
+		.bmr-button:hover
+		{
+			cursor: pointer;
+			background: #272828;
+			color: #fff;
+		}
+		.wo-last
+		{
+			background: url("images/wo.png");
+			background-size: cover;
+			width: 100%;
+			height: 700px;
+			float: left;
+			margin-bottom: 300px;
+			box-shadow: 1px 2px 20px 0px;
+		}
+		.wo-title
+		{
+			text-transform: uppercase;
+			font-size: 35px;
+			color: #272828;
+			font-family: poppins;
+			float: left;
+			font-weight: 700;
+		}
+		.wo-title2
+		{
+			font-size: 35px;
+			color: #fb5607;
+			font-family: poppins;
+		}
+		.wo-last div
+		{
+			width: 500px;
+			float:right;
+			margin: 230px 230px 0px 0px;
+		}
+		.wo-des
+		{
+			font-size: 20px;
+			color: #272828;
+			font-family: poppins;
+			float: left;
+			text-transform: capitalize;
+			width: 650px;
+			margin: 0px;
+		}
+		.wo-button
+		{
+			width: 100px;
+			height: 40px;
+			background: #fb5607;
+			border: 0px;
+			border-radius: 10px;
+			margin: 25px 30px 0px 0px;
+			color: #fff;
+			font-size: 17px;
+			transition: 0.4s;
+			outline: none;
+			float: right;
+		}
+		.wo-button:active
+		{
+			position: relative;
+			top:2px;
+		}
+		.wo-button:hover
+		{
+			background: #272828;
+			color: #fff;
+			cursor: pointer;
+		}
+		.footer
+		{
+			width: 100%;
+			height: auto;
+			float: left;
+			margin: auto;
+			text-align: center;
+		}
+		.img-footer
+		{
+			width: 40px;
+			height: 40px;
+			padding: 5px;
+			margin-right: 25px;
+			cursor: pointer;
+			border-radius: 10px;
+
+		}
+		.img-footer:hover
+		{
+			background-color:  #B0D9E4;
+		}
+		#copyright
+		{
+			width: 500px;
+			height: auto;
+			display: block;
+			padding-top: 20px;
+			margin: auto;
+			color: #677FD5;
+		}
+		#final
+		{
+			padding-top: 20px;
+			padding-bottom: 40px;
+			margin: auto;
+			color: #677FD5;
+		}
+		#final a
+		{
+			text-decoration: none;
+			color: #677FD5;
+			font-size: 1.1em;
+			margin-right: 60px;
+		}
+		@media only screen and (max-width:1000px)
+		{
+			.menu
+			{
+				display: none;
+			}
+			#sign-con
+			{
+				display: none;
+			}
+			.img
+			{
+				float: none;
+				display: inline-block;
+				width: inherit;
+				height: inherit;
+				margin: 20px 350px;
+			}
+
+		}
+	</style>
+	<script src="jquery-3.5.1.js"></script>
+	<script src="scrollreveal.js"></script>
+		<script>
+		$(document).ready(function(){
+			$('.search').mouseover(function(){
+				$('#search-con input').css({"transition": ".5s","width": "300px","abs": "absolute","right": "80px","top": "12px","display": "inline-block"});
+			});
+			$('.search').mouseleave(function(){
+				$('#search-con input').css({"transition": ".5s","width": "0px","display": "none"});
+			});
+			$('#prof').click(function(){
+				window.location = "My_profile.html";
+			});
+			$('.img-footer').click(function(){
+				window.location = "Not-found.html"
+			});
+			const sr = ScrollReveal({
+			origin: 'top',
+			distance: '30px',
+			duration: 1500,
+			reset: true
+			});
+			sr.reveal(`.x, .ahmed,
+				#fcc-title, #fcc-img,
+				.fcc-button, #fcc-discription,
+				.nutritionbutton, .bimg, .wo-button,
+				.txt, .button, .nutritioncontainer,
+				.bmr-button, .wo-title, .wo-des `, {
+				interval: 200
+			})
+		});
+		</script>
+</head>
+<body class="body">
+	<div class="header">
+		<div id="sign-con">
+			<a href="Sign_in.html"><input type="button" value="Log in" id="signin"></a>
+			<a href="sign-up.html"><input type="button" value="Sign up" id="signup"></a>
+		</div>
+		<b class="img"> F I T N E S S  C L U B </b>
+		<div class="menu">
+			<a href="javascript:"> Home </a>
+			<a href="Blog.html"> Blog </a>
+			<a href="About.html"> About </a>
+			<a href="Contact-Us.html"> Contact us</a>
+			<div><div id="prof"></div><div id="search-con"><input type="text" placeholder="Search" class="search"><img src="images/search.png" alt="search" id="search" class="search"></div></div>
+		</div>
+	</div>
+	<div class="background">
+		<div class="txt">
+			<b> Build Perfect Body <br> With Clean Mind. </b>
+		</div>
+		<a href="subjblog.2.html" target="_parent"><input class="button" type="button" value="Let's Go"></a>
+	</div>
+	<div class="nutritioncontainer">
+		<div class="discon">
+			<b class="titlee">NUTRITION</b>
+			<b class="titleee">STYLES</b>
+			<b class="titleeee">.</b>
+			<b class="nutritiondiscription">
+		 	 Plan your meals and snacks to include <br>
+			  nutrient-dense foods <br>
+			  that are also low in calories.</b>
+		<input class="nutritionbutton" type="button" value="Try it">
+		</div>
+		<div class="bimg"><img  width="450" height="450" alt="bimg" src="images/n.png"></div>
+	</div>
+	<div class="fcc-container">
+		<img src="images/fcc.jpeg" id="fcc-img" width="550" height="350" alt="fcc-img">
+		<p id="fcc-title">
+			<b class="fcc-color-title">Food calories</b>
+			  calculator
+			<b class="fcc-color-title">.</b>
+		</p>
+		<p id="fcc-discription">
+			Allows you to choose from <br>
+			thousands of foods and the
+			results will be <br> saved to your personal web page <br>
+			so you can track your progress.
+		</p>
+		<input class="fcc-button" type="button" value="Try it">
+	</div>
+	<div class="bmr-container">
+	<div class="x">	<b class="t1">bmi <b class="t2">calculator</b> .</b></div>
+		<p class="ahmed">
+			is the total number of calories
+			that your body <br> needs to perform basic,
+			life-sustaining functions. <br>
+	   		These basal functions include circulation, <br>
+			breathing, cell production, nutrient processing,
+			<br>	protein synthesis, and ion transport.
+		</p>
+		<img class="ahmed" src="images/bmr.png" width="400" height="400" alt="bmr">
+		<a href="BMI_calc.html" target="_parent"><input class="bmr-button" type="button" value="Try it"></a>
+	</div>
+	<div class="wo-last">
+		<div>
+			<b class="wo-title" > custom your <b class="wo-title2">workout</b>.</b>
+			<p class="wo-des">
+			is important element to acheive your goal and your needs <br>
+ 			we suggest the workout plan designed for your intensity needs </p>
+ 			<a href="subjblog.html" target="_parent"><input class="wo-button" type="button" value="Try it"></a>
+		</div>
+	</div>
+	<div class="footer">
+		<img src="images/fb.svg" alt="facebook" class="img-footer">
+		<img src="images/tw.svg" alt="facebook" class="img-footer">
+		<img src="images/yo.svg" alt="facebook" class="img-footer">
+		<img src="images/in.svg" alt="facebook" class="img-footer">
+		<img src="images/p.svg" alt="facebook" class="img-footer">
+		<img src="images/insta.svg" alt="facebook" class="img-footer">
+		<div id="copyright">Copyright 2021 FITNESS CLUB Inc. All rights reserved.</div>
+		<div id="final"><a href="About.html" target="_parent">About Fitness club</a><a href="Not-found.html" target="_blank">Privacy Policy</a><a href="Not-found.html" target="_blank">Terms of Service</a></div>
+	</div>
+</body>
+</html>

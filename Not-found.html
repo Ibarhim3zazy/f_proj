@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Not-found</title>
+	<style>
+		body
+		{
+			margin: 0px;
+			background-color: #e4e2e3;
+			font-family: poppins , avenir;
+			font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif" ,Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+			text-align: center;
+		}
+		h1
+		{
+			font-size: 10em;
+			margin-top: 80px;
+		}
+		h3
+		{
+			font-size: 1.5em;
+			position: relative;
+			top: -80px;
+		}
+		h5
+		{
+			font-size: .9em;
+			position: relative;
+			top: -90px;
+		}
+		div
+		{
+			width: 250px;
+			height: auto;
+			margin: auto;
+		}
+		input
+		{
+			width: 250px;
+			height: 45px;
+			background: linear-gradient(to left, #f66432, #ea1c60);
+			margin: auto;
+			margin-top: -80px;
+			color: #fff;
+			border-radius: 3px;
+			border-style: solid;
+			border-width: 1.9px;
+			transition: .5s;
+			font-size: 1em;
+			display: block;
+			text-decoration: none;
+		}
+		input:hover
+		{
+			background: #272828;
+			transition: .5s;
+		}
+		input:focus
+		{
+			outline: none;
+		}
+		input:active
+		{
+			position: relative;
+			top: 5px;
+		}
+		#back
+		{
+			width: 100px;
+			height: auto;
+			font-size: 1em;
+			display: inline-block;
+			text-decoration: none;
+			margin-top: 20px;
+		}
+		#back:hover
+		{
+			color: darkblue;
+			font-size: 1.1em;
+			margin-top: 15px;
+		}
+		#home
+		{
+			width: 100px;
+			height: auto;
+			text-decoration: none;
+		}
+		#home input{
+			cursor: pointer;
+		}
+		#home:hover
+		{
+			color: darkblue;
+			font-size: 1.1em;
+			margin-top: 15px;
+		}
+
+	</style>
+	<script src="jquery-3.5.1.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#back').click(function(){
+				window.history.back();
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<h1>Oops!</h1>
+	<h3>404 - PAGE NOT FOUND</h3>
+	<h5>The page you are looking for might have been removed<br>had its name changed or is temporarily unavailable.</h5>
+	<div>
+		<a href="index.html" id="home"><input type="button" value="GO TO HOMEPAGE"></a>
+		<a href="javascript:" id="back">GO BACK</a>
+	</div>
+</body>
+</html>

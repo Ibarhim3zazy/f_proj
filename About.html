@@ -1,0 +1,355 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>About</title>
+	<style>
+		body
+		{
+			margin: 0px;
+			background-image: url("images/background.jpg");
+			background-size: cover;
+			background-attachment: fixed;
+			font-family: poppins , avenir;
+			font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif" ,Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+		}
+		.header
+		{
+			width: 100%;
+			height: 70px;
+			margin: 0px;
+			box-shadow: 0px 0px 5px 0px;
+			background: #e4e2e3;
+			position: fixed;
+			z-index: 999;
+		}
+		.img
+		{
+			float: left;
+			margin-left: 100px;
+			margin-top: 17px;
+			font-family: avenir;
+			font-size: 30px;
+		}
+		.menu
+		{
+			float: right;
+			width: 600px;
+			height: 70px;
+			margin-top: 7px;
+		}
+		.menu a
+		{
+			width: 120px;
+			height: 40px;
+			text-align: center;
+			padding-top: 15px;
+			float: left;
+			font-family: poppins;
+			color: #000;
+			text-decoration: none;
+			font-size: 17px;
+		}
+		.menu a:hover
+		{
+			font-size: 1.2em;
+			border-bottom-style: solid;
+			border-bottom-color: gray;
+			border-bottom-width: 6px;
+			transition: .2s;
+			background-color: #3A3A3A99;
+			border-radius: 5px;
+			color: #fff;
+		}
+		#prof
+		{
+			width: 40px;
+			height: 40px;
+			float: right;
+			margin-right: 20px;
+			margin-top: 5px;
+			border-radius: 180px;
+			background-image: url("images/prof.png");
+			background-size: cover;
+			background-color: #8B8A8A88;
+		}
+		#prof:hover
+		{
+			background-color: #8B8A8A;
+			cursor: pointer;
+		}
+		#search-con
+		{
+			width: 30px;
+			height: 30px;
+			float: right;
+			margin-right: 20px;
+			margin-top: 10px;
+		}
+		#search
+		{
+			width: 30px;
+			height: 30px;
+			float: right;
+			margin-right: 20px;
+			position: relative;
+			left: 15px;
+		}
+		#search-con input
+		{
+			width: 0px;
+			height: 35px;
+			border-radius: 20px;
+			border-style: solid;
+			border-width: 1.5px;
+			transition: .5s;
+			position: absolute;
+			right: 80px;
+			top: 12px;
+			display: none;
+		}
+		#search-con input:focus
+		{
+			outline: none;
+		}
+		#sign-con
+		{
+			float: left;
+			margin: 15px 0px 0px 15px;
+		}
+		#signinn
+		{
+			width: 70px;
+			height: 30px;
+			border-radius: 10px;
+			border: none;
+			margin-right: 5px;
+			background-color: #E1ECF4;
+			color: #5F8FB1;
+			font-size: .9em;
+		}
+		#signinn:hover
+		{
+			background-color: #C7F4F3;
+			cursor: pointer;
+		}
+		#signinn:focus
+		{
+			outline: none;
+		}
+		#signinn:active
+		{
+			position: relative;
+			top: 2px;
+		}
+		#signupp
+		{
+			width: 70px;
+			height: 30px;
+			border: none;
+			border-radius: 10px;
+			background-color: #0095FF;
+			color: #fff;
+			font-size: .9em;
+		}
+		#signupp:hover
+		{
+			background-color: #0287FF;
+			cursor: pointer;
+		}
+		#signupp:focus
+		{
+			outline: none;
+		}
+		#signupp:active
+		{
+			position: relative;
+			top: 2px;
+		}
+		#head
+		{
+			width: 100%;
+			height: 500px;
+			background-color: #0009;
+			margin-bottom: 70px;
+			display: inline-block;
+			position: relative;
+			top: 70px;
+		}
+		#contact
+		{
+			width: 200px;
+			height: auto;
+			color: #fff;
+			margin: auto;
+			text-align: center;
+			margin-top: 200px;
+		}
+		#container
+		{
+			width: 100%;
+			height: auto;
+			margin: auto;
+			padding: 50px 0px;
+			background-color: #e4e2e3;
+		}
+		.abouthead
+		{
+			text-align: center;
+		}
+		.about
+		{
+			width: 65%;
+			height: auto;
+			text-align: center;
+			margin: auto;
+			font-size: 1.1em;
+		}
+		.fitimg
+		{
+			width: 100%;
+			height: 400px;
+			margin-top: 100px;
+			margin-bottom: 20px;
+		}
+		#signup
+		{
+			width: 300px;;
+			height: auto;
+			margin: auto;
+			margin-top: 40px;
+			color: #000a;
+			text-align: center;
+		}
+		#signupgo
+		{
+			color: #0007;
+			transition: .5s;
+		}
+		#signupgo:hover
+		{
+			transition: .5s;
+			color: #000;
+		}
+		#map
+		{
+			width: 100%;
+			height: 400px;
+			border-radius: 10px;
+			margin: 50px 0px 50px 0px;
+		}
+		.footer
+		{
+			width: 100%;
+			height: auto;
+			float: left;
+			margin: auto;
+			text-align: center;
+			background: #e4e2e3;
+		}
+		.img-footer
+		{
+			width: 40px;
+			height: 40px;
+			padding: 5px;
+			margin-right: 25px;
+			cursor: pointer;
+			border-radius: 10px;
+
+		}
+		.img-footer:hover
+		{
+			background-color:  #B0D9E4;
+		}
+		#copyright
+		{
+			width: 500px;
+			height: auto;
+			display: block;
+			padding-top: 20px;
+			margin: auto;
+			color: #677FD5;
+		}
+		#final
+		{
+			padding-top: 20px;
+			padding-bottom: 40px;
+			margin: auto;
+			color: #677FD5;
+		}
+		#final a
+		{
+			text-decoration: none;
+			color: #677FD5;
+			font-size: 1.1em;
+			margin-right: 60px;
+		}
+	</style>
+	<script src="jquery-3.5.1.js"></script>
+	<script src="scrollreveal.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.search').mouseover(function(){
+				$('#search-con input').css({"transition": ".5s","width": "300px","abs": "absolute","right": "80px","top": "12px","display": "inline-block"});
+			});
+			$('.search').mouseleave(function(){
+				$('#search-con input').css({"transition": ".5s","width": "0px","display": "none"});
+			});
+			$('#prof').click(function(){
+				window.location = "My_profile.html";
+			});
+			$('.img-footer').click(function(){
+				window.location = "Not-found.html"
+			});
+			const sr = ScrollReveal({
+			origin: 'top',
+			distance: '30px',
+			duration: 1500,
+			reset: true
+			});
+		sr.reveal(`#contact, .abouthead, .about, .fitimg,
+					#map, #end`,
+				  {
+    				interval: 200
+				  })
+		});
+	</script>
+</head>
+
+<body>
+	<div class="header">
+		<div id="sign-con">
+			<a href="Sign_in.html"><input type="button" value="Log in" id="signinn"></a>
+			<a href="sign-up.html"><input type="button" value="Sign up" id="signupp"></a>
+		</div>
+		<b class="img"> F I T N E S S  C L U B </b>
+		<div class="menu">
+			<a href="index.html"> Home </a>
+			<a href="Blog.html"> Blog </a>
+			<a href="About.html"> About </a>
+			<a href="Contact-Us.html"> Contact us</a>
+			<div><div id="prof"></div><div id="search-con"><input type="text" placeholder="Search" class="search"><img src="images/search.png" alt="search" id="search" class="search"></div></div>
+		</div>
+	</div>
+	<div id="head"><h1 id="contact">About Us</h1></div>
+	<div id="container">
+		<h2 class="abouthead">Created to help you live a better, happier, healthier life.</h2>
+		<p class="about">We believe fitness should be accessible to everyone, everywhere, regardless of income level or access to a gym. That's why we offer hundreds of free, full-length workout videos, the most affordable and effective workout programs on the web, meal plans, and helpful health, nutrition and fitness information.</p>
+		<img src="images/fitnessimg1.jpg" alt="fit1" class="fitimg">
+		<h2 class="abouthead">We believe in unbiased, gimmick-free, research-backed information</h2>
+		<p class="about">The only thing we endorse is eating unprocessed, whole foods, and working out for a strong, healthy body. As a business, we believe good things happen when you put people before profit.</p>
+		<img src="images/fitnessimg2.png" alt="fit1" class="fitimg">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d218928.10940757772!2d29.89906023828894!3d30.97741036484277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f59536b070d2a1%3A0x2a6b49b838506548!2sFitness%20club!5e0!3m2!1sar!2seg!4v1616872591218!5m2!1sar!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" id="map"></iframe>
+	</div>
+	<div class="footer">
+		<img src="images/fb.svg" alt="facebook" class="img-footer">
+		<img src="images/tw.svg" alt="facebook" class="img-footer">
+		<img src="images/yo.svg" alt="facebook" class="img-footer">
+		<img src="images/in.svg" alt="facebook" class="img-footer">
+		<img src="images/p.svg" alt="facebook" class="img-footer">
+		<img src="images/insta.svg" alt="facebook" class="img-footer">
+		<div id="copyright">Copyright 2021 FITNESS CLUB Inc. All rights reserved.</div>
+		<div id="final"><a href="About.html" target="_parent">About Fitness club</a><a href="Not-found.html" target="_blank">Privacy Policy</a><a href="Not-found.html" target="_blank">Terms of Service</a></div>
+	</div>
+</body>
+</html>
